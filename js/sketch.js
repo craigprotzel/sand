@@ -13,16 +13,11 @@ function draw() {
 			sandArray[i].update();
 		}
 		sandArray[i].display();
-
 	}
 }
 
 function mousePressed(){
-	/*
-	console.log("Making Sand!");
-	var sandParticle = new Sand(mouseX, mouseY, random(-2,2), 3);
-	sandArray.push(sandParticle);
-	*/
+
 }
 
 function windowResized() {
@@ -41,11 +36,6 @@ function Sand(xPos, yPos, xSpeed, ySpeed){
 
 	this.xSpeed = xSpeed;
 	this.ySpeed = ySpeed;
-
-	//Define colors
-	//this.r = Math.round(random(120));
-	///this.g = Math.round(random(200));
-	//this.b = Math.round(random(200));
 
 	this.r = 255;
 	this.g = 243;
