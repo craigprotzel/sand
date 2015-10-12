@@ -7,9 +7,9 @@ function setup() {
 
 function draw() {
 	background(255);
-	sandArray.push(new Sand(mouseX, mouseY, random(-1,1), 3));
+	sandArray.push(new Sand(windowWidth/2, 0, random(-0.2,0.2), 3));
 	for (var i=0; i< sandArray.length; i++) {
-		if (sandArray[i].y < windowHeight - 50){
+		if (sandArray[i].location.y < windowHeight - 200){
 			sandArray[i].update();
 		}
 		sandArray[i].display();
@@ -17,25 +17,38 @@ function draw() {
 }
 
 function mousePressed(){
-
+	//Apply a force once when a click happens
+	var xForce = -1 * ( (mouseX - windowWidth/2)/(windowWidth/2) );
+	var curForce = createVector(xForce,0);
+	for(var i=0; i < sandArray.length; i++){
+		if (sandArray[i].location.y < windowHeight - 200){
+			sandArray[i].applyForce(curForce);
+		}
+	}
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+	resizeCanvas(windowWidth, windowHeight);
 }
-
 
 
 /*---------- SAND CLASS ----------*/
 function Sand(xPos, yPos, xSpeed, ySpeed){
-	this.x = xPos;
-	this.y = yPos;
 
-	this.xWidth = 3;
+	this.location = createVector(xPos,yPos);
+	this.velocity = createVector(0, 0);
+
+	var mouseVector = createVector(mouseX,mouseY);
+	var dirVector = p5.Vector.sub(mouseVector,this.location);
+	dirVector.normalize();
+	dirVector.mult(0.5);
+	this.acceleration = dirVector;
+	this.acceleration.x = this.acceleration.x + random(-0.02,0.02);
+
+	this.topSpeed = 3;
+
+	this.xWidth = 2;
 	this.yHeight = 2;
-
-	this.xSpeed = xSpeed;
-	this.ySpeed = ySpeed;
 
 	this.r = 255;
 	this.g = 243;
@@ -47,10 +60,25 @@ Sand.prototype.display = function(){
 	//Draw particle
 	fill(this.c);
 	noStroke();
-	rect(this.x, this.y, this.xWidth, this.yHeight);
+	rect(this.location.x, this.location.y, this.xWidth, this.yHeight);
 };
 
 Sand.prototype.update = function(){
-	this.x += this.xSpeed;
-	this.y += this.ySpeed;
+
+	// var mouseVector = createVector(mouseX,mouseY);
+	// var dirVector = p5.Vector.sub(mouseVector,this.location);
+	// dirVector.normalize();
+	// dirVector.mult(0.5);
+	// this.acceleration = dirVector;
+	// this.acceleration.x = this.acceleration.x + random(-0.02,0.02);
+	this.velocity.add(this.acceleration);
+	this.velocity.limit(this.topSpeed);
+	this.location.add(this.velocity);
 };
+
+//Triggering this on mouse click
+Sand.prototype.applyForce = function(force){
+    this.acceleration.add(force);
+};
+
+
