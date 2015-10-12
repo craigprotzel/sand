@@ -9,7 +9,7 @@ function draw() {
 	background(255);
 	sandArray.push(new Sand(mouseX, mouseY, random(-1,1), 3));
 	for (var i=0; i< sandArray.length; i++) {
-		if (sandArray[i].y < windowHeight - 5){
+		if (sandArray[i].y < windowHeight - 50){
 			sandArray[i].update();
 		}
 		sandArray[i].display();
@@ -31,8 +31,8 @@ function Sand(xPos, yPos, xSpeed, ySpeed){
 	this.x = xPos;
 	this.y = yPos;
 
-	this.xWidth = 4;
-	this.yHeight = 4;
+	this.xWidth = 3;
+	this.yHeight = 2;
 
 	this.xSpeed = xSpeed;
 	this.ySpeed = ySpeed;
@@ -41,14 +41,13 @@ function Sand(xPos, yPos, xSpeed, ySpeed){
 	this.g = 243;
 	this.b = 89;
 	this.c = color(this.r, this.g, this.b);
-
 }
 
 Sand.prototype.display = function(){
 	//Draw particle
 	fill(this.c);
 	noStroke();
-	ellipse(this.x, this.y, this.xWidth, this.yHeight);
+	rect(this.x, this.y, this.xWidth, this.yHeight);
 };
 
 Sand.prototype.update = function(){
