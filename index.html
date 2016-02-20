@@ -3,24 +3,34 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width">
-		<title>sAnD</title> 
+		<title>Now We're Here</title> 
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<style>
-			body{
-				margin: 0;
-				padding: 0;
-			}
-		</style>
-
 	</head>
 	<body>
-		<div id="container"></div>
-
+		<div class="text-container left">
+			<div class="text-title">Now We're Here</div>
+			<div class="text-subtitle">by Amanda Hope Macari & Craig Protzel</div>
+			<div class="text-subtitle spaced">Press any key to play.</div>
+		</div>
+		<div class="text-container right">
+			<div class="text-subtitle"><a href='/about.html'>ABOUT</a></div>
+		</div>
 		<script src="js/lib/jquery-2.1.4.min.js"></script>
+		<script src="js/keypresses.js"></script>
+
+		<script src="js/lib/box2d-html5.js"></script>
+		<script src="js/lib/box2d-helper.js"></script>
+	
 		<script src="js/lib/p5.js"></script>
 		<script src="js/lib/p5.dom.js"></script>
-		<script src="js/sandParticle.js"></script>
-		<script src="js/sandSystem.js"></script>
-		<script src="js/sketch.js"></script>
+		<script src="js/lib/p5.sound.js"></script>	
+		
+		<script src="js/box2d-sand-image/surfaceShape.js"></script>
+		<script src="js/box2d-sand-image/sandParticle.js"></script>
+		<script src="js/box2d-sand-image/sandBoundary.js"></script>
+		<script src="js/box2d-sand-image/shell.js"></script>
+		<script src="js/box2d-sand-image/colorOptions.js"></script>
+		<script src="js/box2d-sand-image/sketch.js"></script>
+				
 	</body>
 </html>

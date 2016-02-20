@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: Arial;
+	color: black;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+	color: white;
+	cursor: hand;
+}
+.loading{
+	text-align: center;
+	margin: 100px auto;
+	color: black;
+	font-size: 38px;
+}
+
+.text-container{
+	position: fixed;
+	color: white;
+	z-index: 10;
+}
+
+.left{
+	top: 10px;
+	left: 10px;	
+}
+
+.right{
+	top: 10px;
+	right: 10px;
+	text-align: right;
+}
+
+.text-subtitle{
+	font-size: 12px;
+}
+
+.spaced{
+	margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .left {
+  	width: 40%;
+  }
+}
+

@@ -11619,8 +11619,8 @@ var p5 = function(sketch, node, sync) {
       var loadingScreen = document.getElementById(this._loadingScreenId);
       if(!loadingScreen){
         loadingScreen = document.createElement('div');
-        loadingScreen.innerHTML = 'Loading...';
-        loadingScreen.style.position = 'absolute';
+        loadingScreen.innerHTML = 'LOADING...';
+        loadingScreen.className = 'loading';
         loadingScreen.id = this._loadingScreenId;
         var node = this._userNode || document.body;
         node.appendChild(loadingScreen);
