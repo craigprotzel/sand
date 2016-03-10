@@ -1,4 +1,8 @@
-SAND PROJECT
-------------
+NOW WE'RE HERE 
+--------------
 
-A collaboartion between Amanda Hope Macari and Craig Protzel for the NYU Abu Dhabi 2015 Faculty Art Show
+#####Visit ["Now We're Here"](http://craigprotzel.github.io/sand/)
+
+
+A creative collaboration between Craig Protzel Amanda Hope Macari for the NYU Abu Dhabi 2015 Faculty Art Show.
+
