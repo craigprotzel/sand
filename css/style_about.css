@@ -1,0 +1,28 @@
+html { 
+  background: url(../media/stills/NWH_wide_still.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: Arial;
+	color: black;
+	overflow: hidden;
+}
+a{
+	text-decoration: none;
+	color: white;
+	cursor: hand;
+}
+
+.about-text{
+	position: fixed;
+	color: white;
+	top: 20px;
+	left: 20px;
+}
