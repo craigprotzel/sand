@@ -3,6 +3,7 @@ NOW WE'RE HERE
 
 #####Visit ["Now We're Here"](http://craigprotzel.github.io/sand/)
 
+#####Watch [Video Documentation](https://vimeo.com/158478363)
 
 A creative collaboration between [Craig Protzel](http://craigprotzel.com) and [Amanda Hope Macari](http://amandahopemacari.com) for the NYU Abu Dhabi 2015 Faculty Art Show.
 
