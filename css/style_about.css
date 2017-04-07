@@ -21,9 +21,8 @@ a:hover{
 }
 
 .about-text{
-
 	text-align: justify;
-	width: 640px;
+	max-width: 640px;
 	margin: 40px auto;
 }
 
@@ -41,8 +40,11 @@ iframe{
 }
 
 
-@media (max-width: 639px) {
+@media (max-width: 699px) {
   iframe {
+  	width: 80%;
+  }
+  .about-text{
   	width: 80%;
   }
 }
